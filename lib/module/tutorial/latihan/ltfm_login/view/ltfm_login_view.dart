@@ -30,6 +30,13 @@ class LtfmLoginView extends StatefulWidget {
               // hint: Your password
               // label: Password
               // obscure: true
+              QTextField(
+                value: "123456",
+                hint: "Your password",
+                label: "Password",
+                obscure: true,
+                onChanged: (value) {},
+              ),
 
               QTextField(
                 value: "123456",
@@ -45,6 +52,11 @@ class LtfmLoginView extends StatefulWidget {
               //ketika di klik, panggil:
               // controller.doLogin()
               //Jika dialog muncul ketika tombol di klik, tasks ini selesai
+              ElevatedButton.icon(
+                icon: const Icon(Icons.login),
+                label: const Text("Login"),
+                onPressed: () => controller.doLogin(),
+              ),
 
               ElevatedButton.icon(
                 icon: const Icon(Icons.login),
