@@ -266,7 +266,7 @@ class LtfmCheckoutFormView extends StatefulWidget {
                 icon: const Icon(Icons.check),
                 label: const Text("Checkout"),
                 style: ElevatedButton.styleFrom(
-                  maximumSize: Size(MediaQuery.of(context).size.width, 40),
+                  minimumSize: Size(MediaQuery.of(context).size.width, 40),
                   backgroundColor: Colors.grey,
                 ),
                 onPressed: () async {
