@@ -7,6 +7,7 @@ class QTextField extends StatefulWidget {
   final String? Function(String?)? validator;
   final bool obscure;
   final Function(String) onChanged;
+  final IconData? suffixIcon;
 
   const QTextField({
     Key? key,
@@ -16,6 +17,7 @@ class QTextField extends StatefulWidget {
     this.hint,
     required this.onChanged,
     this.obscure = false,
+    this.suffixIcon = Icons.text_format,
   }) : super(key: key);
 
   @override
@@ -45,8 +47,8 @@ class _QTextFieldState extends State<QTextField> {
             color: Colors.blueGrey,
           ),
         ),
-        suffixIcon: const Icon(
-          Icons.text_format,
+        suffixIcon: Icon(
+          widget.suffixIcon,
         ),
         helperText: widget.hint,
       ),
