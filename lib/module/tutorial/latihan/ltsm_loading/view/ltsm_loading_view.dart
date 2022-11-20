@@ -17,7 +17,7 @@ class LtsmLoadingView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [
+            children: [
               /*
               ? Buat variabel loading di dalam State/Controller
               ! bool loading = false;
@@ -33,6 +33,31 @@ class LtsmLoadingView extends StatefulWidget {
               */
                 
               */
+              Text(
+                "loading: ${controller.loading}",
+                style: const TextStyle(
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              if (controller.loading) const CircularProgressIndicator(),
+              const SizedBox(
+                height: 20.0,
+              ),
+              ElevatedButton.icon(
+                icon: const Icon(Icons.add),
+                label: const Text("Update loading state"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {
+                  controller.loading = !controller.loading;
+                  controller.setState(() {});
+                },
+              ),
             ],
           ),
         ),
