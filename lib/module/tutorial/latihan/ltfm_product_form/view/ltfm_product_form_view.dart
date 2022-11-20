@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 import 'package:flutter/services.dart';
 
-import '../../../../../shared/widget/form/lie_icon_button.dart';
-
 class LtfmProductFormView extends StatefulWidget {
   const LtfmProductFormView({Key? key}) : super(key: key);
 
@@ -17,8 +15,10 @@ class LtfmProductFormView extends StatefulWidget {
           //! 5. Tambahkan tombol Save
           //! 6. Beri padding/margin pada tombol Save sebanyak 10
           //! 7. Panggil controller.save() ketika tombol di klik
-          LieIconButton(
-            onPressed: () {
+          IconButton(
+            padding: const EdgeInsets.all(10),
+            icon: const Icon(Icons.save),
+            onPressed: () async {
               controller.save();
             },
           ),

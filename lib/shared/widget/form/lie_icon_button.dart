@@ -9,7 +9,7 @@ class LieIconButton extends StatefulWidget {
   });
   final double? paddingAll;
   final IconData? lieIcon;
-  final VoidCallback? onPressed;
+  final Function? onPressed;
 
   @override
   State<LieIconButton> createState() => _LieIconButtonState();
