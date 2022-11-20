@@ -1,3 +1,4 @@
+import 'package:example/shared/widget/form/lie_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
@@ -11,9 +12,7 @@ class LtfmEditProfileView extends StatefulWidget {
       appBar: AppBar(
         title: const Text("LtfmEditProfile"),
         actions: [
-          IconButton(
-            padding: const EdgeInsets.all(10),
-            icon: const Icon(Icons.save),
+          LieIconButton(
             onPressed: () {
               controller.save();
             },
